@@ -1,0 +1,5 @@
+JavaCodingPack-0.4.2.exe
+*.class
+*.log
+*.tmp
+*.vscode/
