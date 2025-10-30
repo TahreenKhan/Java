@@ -45,7 +45,7 @@ public class recursion{
          recursion(5);
          recursion2(1 );
          printSum(1,5, 0);
-         printFactorial(1, 5, 1);
+         
     }
 }
 
