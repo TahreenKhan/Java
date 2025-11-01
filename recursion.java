@@ -3,12 +3,12 @@
 public class recursion{
 
     // printing numbers from n to 1
-    public static void recursion(int n){
+    public static void recurson(int n){
         if(n==0){
             return;
         }else{
             System.out.print(n);
-            recursion(n-1);
+            recurson(n-1);
         }
         System.out.println();
     }
@@ -39,12 +39,56 @@ public class recursion{
     }
 
     //print factorial of a number n;
-    
+    public static int printFact(int n){
+        // base case
+        if(n==0){
+            return 1;
+        }
+        return n * printFact(n-1);
+    }
+
+    public static int printFibonacci(int n){
+        // base case
+        if(n==0){
+            return 0;
+        }
+        if(n==1){
+            return 1;
+        }
+
+        int fib = printFibonacci(n-1)+printFibonacci(n-2);
+        return fib;
+    }
+
+    // print x^n (stack height = n)
+    public static int print_power(int x, int n){
+
+        // base-case
+        if(n==0){
+            return 1;
+        }
+        return x*(print_power(x, n-1));
+    }
+    public static int fastPower(int x, int n){
+        if(n==0){
+            return 1;
+        }
+        int half = fastPower(x, n/2);
+        if(n%2==0){
+            return half*half;
+        }else{
+            return x*half*half;
+        }
+    }
     
     public static void main(String args[]){
-         recursion(5);
+         recurson(5);
          recursion2(1 );
          printSum(1,5, 0);
+         System.out.println(printFact(3));
+         System.out.println(printFibonacci(7));
+         System.out.println(print_power(2,5));
+         System.out.println(fastPower(2, 5));
          
     }
 }
