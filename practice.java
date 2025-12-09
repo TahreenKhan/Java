@@ -1,45 +1,72 @@
-public class practice {
+//Questions to practice
+// Print numbers from 1 to n using recursion.
 
-    public static void printArr(int arr[]){
-        for(int i=0; i<arr.length;i++){
-            System.out.print(arr[i]+" ");
+// Print numbers from n to 1 using recursion.
+
+// Sum of digits of a number (e.g., 123 → 6).
+
+// Count digits in a number.
+
+// Factorial of n.
+
+// Reverse a number (using % and /).
+
+// Check if a string is palindrome using recursion.
+
+// Find maximum element in an array using recursion.
+
+// Print each character of a string in reverse (like stack trace).
+
+// Fibonacci number (simple version).
+
+
+
+
+public class practice{
+
+    // print numbers from 1 to n 
+
+    public static void printNum(int i, int n){
+        if(i==n){
+            System.out.print(i);
+            return;
         }
-        System.out.println();
+        System.out.print(i);
+        printNum(i+1, n);
+        System.out.println();  
+        System.out.print(i);
     }
+
+    // Print numbers from n to 1 using recursion.
+    public static int prntNum(int n){
+        if(n==1){
+            return 1;
+        }
+        System.out.println(n);
+        return prntNum(n-1);
+    }
+ 
+    // Sum of digits of a number (e.g., 123 → 6).
+
+    public static int sumNum(int n){
+        if(n==0){
+            return 0;
+        }
+        return n+sumNum(n-1);
+    }
+
+
+
+    
 
     public static void main(String args[]){
-        // sorting. 
-        // bubble sort. 
-        int arr[]={6,5,4,4,3,2,7,1};
-        // for(int i=0;i<arr.length-1;i++){
-        //     for(int j=0;j<arr.length-i-1;j++){
-        //         if(arr[j]>arr[j+1]){
-        //             int temp = arr[j];
-        //             arr[j] = arr[j+1];
-        //             arr[j+1] = temp;
-        //         }
-        //     }
-        // }
-        printArr(arr);
-
-        // selection sort
-        // for(int i=0;i<arr.length-1;i++){
-        //     int smallest = i;
-        //     for(int j=i+1;j<arr.length;j++){
-        //         if(arr[j]<arr[smallest]){
-        //             smallest = j;
-        //         }
-        //     }
-        //     int temp = arr[i];
-        //     arr[i] = arr[smallest];
-        //     arr[smallest] = temp;
-        // }
-        // printArr(arr);
-
-        // Insertion sort.
+        // printNum(1, 5);
+        // System.out.println(prntNum(5));
+        System.out.println(sumNum(5));
+        
     }
-    
 }
+
 
 
 

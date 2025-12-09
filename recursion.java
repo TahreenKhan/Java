@@ -33,7 +33,7 @@ public class recursion{
         }
         else{
             sum+=i;
-        printSum(i+1, n, sum);
+        printSum(i+1, n, sum);  
         System.out.println(i);   //did not understand this line.the out put is 15 , 4,3,2,1     . she said it's some sort of stack deletion
         }
     }
@@ -92,6 +92,11 @@ public class recursion{
          
     }
 }
+
+
+
+
+
 
 
 
