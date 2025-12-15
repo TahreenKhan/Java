@@ -55,7 +55,23 @@ public class practice{
         return n+sumNum(n-1);
     }
 
+    // count digits in a number
+    public static int count(int n){
+       
+        if(n==0){
+            return 0;
+        }
+        return 1+count(n/10);
+        }
+        
+    public static int fibonacci(int n){
+        if(n==1 || n==0){
+            return 1;
+        }
+        return n*fibonacci(n-1);
+    }
 
+    // Reverse a number (using % and /).
 
     
 
@@ -63,7 +79,8 @@ public class practice{
         // printNum(1, 5);
         // System.out.println(prntNum(5));
         System.out.println(sumNum(5));
-        
+        System.out.println(count(12345));
+        System.out.println(fibonacci(5));
     }
 }
 

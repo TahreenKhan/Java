@@ -20,12 +20,43 @@ public class recursion_best_prob {
         return reverseString(s.substring(1))+s.charAt(0);
     }
     
+    // print first and last occurence of character in a given string. 
+    static int first_occurence = -1;
+    static int last_occurence = -1;
+    public static void occurence(int i, String s, char t){
+        if(i==s.length()){
+            System.out.println("First occurence of "+t+" is at index "+first_occurence);
+            System.out.println("Last occurence of "+t+" is at index "+last_occurence);
+            
+            return;
+        }
+        if(s.charAt(i)==t){
+            if(first_occurence==-1){
+                first_occurence = i;
+            }
+            last_occurence = i;
+        }
+        occurence(i+1, s, t);
+    }
+
+    // Check if an arrray is sorted(strictly increasing)
+    public static boolean isSorted(int arr[], int i){
+        if(i==arr.length-1){
+            return true;
+        }
+        if(arr[i]>arr[i+1]){
+            return false;
+        }
+        return isSorted(arr, i+1);
+    }
 
     public static void main(String args[]){
         int n=3;
         towerOfHanoi(n, 'A', 'C', 'B');
         System.out.println(reverseString("Tahreen"));
+        occurence(0, "Abracadabra", 'a');
+        System.out.println(isSorted(new int[]{1,2,3,4,5}, 0));
+    
     }
 }
-
 
