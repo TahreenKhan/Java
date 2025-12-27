@@ -50,13 +50,44 @@ public class recursion_best_prob {
         return isSorted(arr, i+1);
     }
 
+//    Move all x to the end of the string. 
+    public static String MoveAtEnd(String s, char t, int i, int count){
+        // Base case
+        if(i == s.length()){
+            return String.valueOf(t).repeat(count);
+        }
+        if(s.charAt(i)==t){
+            return MoveAtEnd(s, t, i+1, count+1);
+        }
+        else{
+            return s.charAt(i)+MoveAtEnd(s, t, i+1, count);
+        }
+    }
+
+    // remove duplicates in a string
+    public static String removeDuplicates(String s, int i){
+        if(i==s.length()-1){
+            return String.valueOf(s.charAt(i));
+        }
+        if(s.charAt(i)==s.charAt(i+1)){
+            return removeDuplicates(s, i+1);
+        }
+        else{
+            return s.charAt(i)+removeDuplicates(s, i+1);
+        }
+    }
+    
+
     public static void main(String args[]){
         int n=3;
         towerOfHanoi(n, 'A', 'C', 'B');
         System.out.println(reverseString("Tahreen"));
         occurence(0, "Abracadabra", 'a');
         System.out.println(isSorted(new int[]{1,2,3,4,5}, 0));
+        System.out.println(MoveAtEnd("axbxcxdx", 'x', 0, 0));
+        System.out.println(removeDuplicates("aabbccddefgehf", 0));
     
     }
 }
+
 
