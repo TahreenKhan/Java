@@ -1,14 +1,14 @@
 class Pen{
-    // variable/field/attribute.
+    // variable/field/attribute/data members : what an object has
     String color;
     String type;
 
-    // members/functions/info
+    // methods/functions/info : what an object does. 
     public void function_of_pen(){
         System.out.println("Write something.");
     }
 
-    // this function/member is to print the class
+    // this function/method is to print the class
     public void printclass(){
         System.out.println(this.color);
         System.out.println(this.type);
@@ -101,15 +101,17 @@ public class OOps{
         pen2.printclass();
         pen3.printclass();
         
-        // // Using parameterized constructor. 
-        // Pen pen2 = new Pen("blue","Ballpoint");
-        // Pen pen3 = new Pen("lightblue","Liquid Gell Pen");
-        
-        // Student S1 = new Student();
-        // S1.name = "Kartik Aryan";
-        // S1.age = 12;
-        // S1.grade = 'B';
-        // S1.marks = 75;
-        // S1.printclass();
+        // Using parameterized constructor. 
+        Pen pen4 = new Pen("blue","Ballpoint");
+        Pen pen5 = new Pen("lightblue","Liquid Gell Pen");
+        pen4.printclass();
+        pen5.printclass();
+
+        Student S1 = new Student();
+        S1.name = "Kartik Aryan";
+        S1.age = 12;
+        S1.grade = 'B';
+        S1.marks = 75;
+        S1.printclass();
     }
 }
